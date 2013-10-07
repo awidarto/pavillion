@@ -213,9 +213,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 20px;
-  color: #333333;
+  color: #FFFFFF;
   background-color: #ffffff;
   overflow: auto;
+    background: url(../img/header-bg.jpg) repeat-y fixed center center transparent;
+
 }
 a {
   color: #ffffff;
@@ -6259,7 +6261,6 @@ a:active {
  * -------------------------------------------------------------
  */
 #header {
-  background: url(../img/header-bg.jpg) no-repeat fixed center center transparent;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   -o-background-size: 100%;
@@ -6710,9 +6711,6 @@ a:active {
   -o-background-size: cover;
   background-size: cover;
   filter: none;
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
 }
 .navbar .nav > li {
   position: relative;
@@ -6878,7 +6876,7 @@ a:active {
   margin: 0 auto 15px;
 }
 .filter a {
-  color: #333333;
+  color: #FFFFFF;
 }
 .filter a.active,
 .filter a:hover,
@@ -6991,7 +6989,9 @@ a:active {
 }
 .divider .bg-holder {
   height: 350px;
+  /*
   background: url(../img/fur.jpg) no-repeat center center fixed;
+  */
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   -o-background-size: 100%;
@@ -7895,7 +7895,10 @@ blockquote p {
  *
  */
 #footer {
+  margin-top: 20px;
+  /*
   background: #33cc66;
+  */
   padding: 10px 0;
   color: #fff;
   position: relative;

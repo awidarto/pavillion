@@ -10,17 +10,8 @@
 
 <footer id="footer">
 	<a href="#" id="btn_up">UP</a>
+    <?php wp_footer(); ?>
 </footer>
-<div class="rotate_container">
-	<ul class="rotate_wrapper">
-      <li class="rotate_item"><span></span></li>
-      <li class="rotate_item delay1"><span></span></li>
-      <li class="rotate_item delay2"><span></span></li>
-      <li class="rotate_item delay3"><span></span></li>
-      <li class="rotate_item delay4"><span></span></li>
-    </ul>
-</div>
-<?php wp_footer(); ?>
 
 </body>
 </html>

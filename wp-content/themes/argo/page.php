@@ -17,8 +17,10 @@ get_header(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
-    <?php 
+    <?php
+
 	if( get_post_meta( get_the_ID(),'enable_divider',true ) == 'true') get_template_part( 'content', 'divider' );
+
      ?>
  <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>
