@@ -23,7 +23,7 @@
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
-        array('class'=>'thumb-menu','label'=>'interior','url'=>'interior'),
+        array('class'=>'thumb-menu','label'=>'interior','url'=>'tag/interior-2'),
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
