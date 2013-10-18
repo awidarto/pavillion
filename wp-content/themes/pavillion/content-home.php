@@ -1,13 +1,13 @@
 <?php
 
     $flipper = array(
-        array('class'=>'thumb-menu','label'=>'home','url'=>'/'),
-        array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
-        array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
-        array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
-        array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
-        array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
-        array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
+        array('class'=>'thumb-menu','label'=>'home','url'=>site_url() ),
+        array('class'=>'thumb-flip','label'=>'home','url'=>site_url() ),
+        array('class'=>'thumb-flip','label'=>'home','url'=>site_url() ),
+        array('class'=>'thumb-flip','label'=>'home','url'=>site_url() ),
+        array('class'=>'thumb-flip','label'=>'home','url'=>site_url() ),
+        array('class'=>'thumb-flip','label'=>'home','url'=>site_url() ),
+        array('class'=>'thumb-flip','label'=>'home','url'=>site_url() ),
         array('class'=>'thumb-menu','label'=>'news','url'=>'news'),
 
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
