@@ -13,7 +13,7 @@
 	</div><!-- #main .wrapper -->
 </div><!-- #page -->
 <div id="bottom-nav">
-        <a href="/">home</a>
+        <a href="<?php print site_url(); ?>">home</a>
         | <a href="<?php print site_url(); ?>/about">about</a>
         | <a href="<?php print site_url(); ?>/awards">awards</a>
         | <a href="<?php print site_url(); ?>/tag/architecture-2">architecture</a>
