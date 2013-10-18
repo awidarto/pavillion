@@ -1,0 +1,39 @@
+#main-home{
+    width:960px;
+    display: block;
+    background-color: transparent;
+    background: url(../images/bg-01.jpg);
+}
+
+body .site {
+    padding: 0px;
+    margin-top: 25px;
+}
+
+#grid-menu{
+    display: block;
+}
+
+.thumb-menu, .thumb-flip{
+    float:left;
+    width:118px;
+    height:128px;
+    line-height: 118px;
+    background-color: orange;
+    margin: 0px;
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+    border: 1px solid grey;
+}
+
+.thumb-flip{
+    background-color: transparent;
+}
+
+.thumb-menu a{
+    text-decoration: none;
+    color: white;
+    text-transform: lowercase;
+    font-family: "Open Sans";
+}

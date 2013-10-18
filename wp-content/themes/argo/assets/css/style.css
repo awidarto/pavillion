@@ -211,7 +211,7 @@ textarea {
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 20px;
   color: #FFFFFF;
   background-color: #ffffff;
@@ -6762,20 +6762,21 @@ a:active {
  * -------------------------------------------------------------
  */
 .section {
-  padding: 90px 0 0 0;
+  padding: 40px 0 0 0;
 }
 .section .hero {
   text-align: center;
   line-height: 30px;
   margin-bottom: 20px;
   border-bottom: 1px solid #DDD;
-  padding-bottom: 40px;
+  /*padding-bottom: 40px;*/
 }
 .section .hero h1 {
-  font-size: 48px;
+  font-size: 24px;
 }
 .section .hero p {
-  font-size: 25.6px;
+  font-size: 16px;
+  display: none;
 }
 /**
  * SERVICES

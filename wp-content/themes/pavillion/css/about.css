@@ -1,0 +1,212 @@
+#bottom-nav{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: "Open Sans";
+}
+
+#bottom-nav a{
+    color: white;
+    text-decoration: none;
+}
+
+
+#main-about{
+    width:960px;
+    display: block;
+    background-color: transparent;
+    font-weight: normal;
+}
+
+#main-about h1{
+    line-height: 1.5em;
+    display: block;
+    padding: 2px;
+    padding-left: 8px;
+    font-size: 1.5em;
+    margin: 8px 0px;
+}
+
+#main-about p{
+    margin-bottom: 8px;
+}
+
+#about-left{
+    width:350px;
+    overflow:hidden;
+    height: 480px;
+    float: left;
+    font-size: 12px;
+    font-family: "Open Sans";
+    text-align: justify;
+    background-color: black;
+    color: white;
+    line-height: 1.5em;
+}
+
+#about-parent-content{
+    overflow-y: auto;
+    padding: 8px 10px;
+    height: 417px;
+}
+
+#about-right{
+    width: 100%;
+}
+
+#top-content{
+    height: 390px;
+    width: 610px;
+    overflow: hidden;
+}
+
+#bottom-bar{
+    width: 100%;
+    height: 80px;
+}
+
+#bottom-bar img{
+    width:80px;
+    height:80px;
+    margin: 4px;
+    -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    2px 2px 5px rgba(50, 50, 50, 0.75);
+    box-shadow:         2px 2px 5px rgba(50, 50, 50, 0.75);
+}
+#project-bottom-bar > h3{
+    font-size: 12px;
+    font-family: "Open Sans";
+    font-weight: bold;
+}
+
+#project-bottom-bar{
+    width: 100%;
+    height: 80px;
+}
+
+#project-bottom-bar img{
+    width:60px;
+    height:60px;
+    margin: 4px;
+    -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    2px 2px 5px rgba(50, 50, 50, 0.75);
+    box-shadow:         2px 2px 5px rgba(50, 50, 50, 0.75);
+}
+
+#project-title{
+    font-weight: bold;
+    padding-left: 355px;
+    font-family: "Open Sans";
+}
+
+.about-content{
+    height: 350px;
+    word-wrap:break-word;
+    display: block;
+    line-height: 1.5em;
+    text-align: justify;
+    padding: 5px 10px;
+    font-family: "Open Sans";
+    font-size: 12px;
+    overflow-y:auto;
+}
+
+.detail-content{
+    height: 480px;
+    word-wrap:break-word;
+    display: block;
+    line-height: 1.5em;
+    text-align: justify;
+    padding: 5px 10px;
+    font-family: "Open Sans";
+    font-size: 12px;
+    overflow-y:auto;
+}
+
+.slide-content{
+    height: 380px;
+    word-wrap:break-word;
+    display: block;
+    line-height: 1.5em;
+    text-align: justify;
+    padding: 0px;
+    font-family: "Open Sans";
+    font-size: 12px;
+    overflow:hidden;
+}
+
+#top-content h4{
+    background-color: orange;
+    line-height: 1.5em;
+    display: block;
+    width: 50%;
+    padding: 2px;
+    padding-left: 8px;
+    font-size: 1.2em;
+    margin: 8px 0px;
+}
+
+
+/* slider */
+#top-content > ul {
+    /* styled by JS to match the added width and height of all <li>’s */
+    position: relative;
+    -webkit-transition: 0.5s left;
+    -moz-transition: 0.5s left;
+    -ms-transition: 0.5s left;
+    -o-transition: 0.5s left;
+
+    list-style: none;
+    margin: 0; padding: 0;
+}
+
+#top-content > ul > li {
+    float: left;
+    width: 610px;
+    height: 400px;
+    word-wrap: break-word;
+}
+
+
+
+/* info slider */
+
+#info-content{
+    height: 480px;
+    width: 350px;
+    overflow: hidden;
+}
+
+#info-content > ul {
+    /* styled by JS to match the added width and height of all <li>’s */
+    position: relative;
+    -webkit-transition: 0.5s left;
+    -moz-transition: 0.5s left;
+    -ms-transition: 0.5s left;
+    -o-transition: 0.5s left;
+
+    list-style: none;
+    margin: 0; padding: 0;
+}
+
+#info-content > ul > li {
+    float: left;
+    width: 350px;
+    height: 480px;
+    word-wrap: break-word;
+}
+
+/*slide show*/
+
+.slideshow-content img{
+    width:100%;
+}
+
+.portfolio-slideshow{
+    margin:0px;
+    overflow: hidden;
+}
+
+.slideshow-wrapper .pager img{
+    margin: 0px;
+}
