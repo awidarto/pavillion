@@ -17,7 +17,7 @@ body .site {
 .thumb-menu, .thumb-flip{
     float:left;
     width:118px;
-    height:128px;
+    height:118px;
     line-height: 118px;
     background-color: orange;
     margin: 0px;
@@ -36,4 +36,10 @@ body .site {
     color: white;
     text-transform: lowercase;
     font-family: "Open Sans";
+}
+
+.flipper{
+    width:118px;
+    height:118px;
+    background-color: transparent;
 }

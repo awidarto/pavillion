@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Project Page Template
+ * Template Name: News Page Template
  *
- * Description: Project Portfolio Info Page, Hierachically arranged for tag filtered list too
+ * Description: News List and Reader Page, Hierachically arranged
  *
  * @package WordPress
  * @subpackage Twenty_Twelve
@@ -53,49 +53,41 @@ get_header('about'); ?>
     });
 
 </script>
+<?php
+
+    $news_posts = get_posts(array('category'=>'news'));
+
+?>
 
 <div id="about-left">
     <h1 class="entry-title"><?php the_title(); ?></h1>
-    <div id="about-parent-content">
-        <?php get_template_part( 'content', 'project' ); ?>
+    <div id="news-list">
+        <ul>
+            <?php
+                $idx = 0;
+                foreach ($news_posts as $p) {
+                    print '<li>';
+                    $thumb = get_the_post_thumbnail($p->ID, 'thumbnail');
+                    print '<a href="javascript:sliders[0].goTo('.$idx.')"><h2>'.$p->post_title .'</h2></a>';
+                    $idx++;
+                    print '</li>';
+                }
+            ?>
+        </ul>
     </div>
 </div>
 <div id="about-right">
-    <?php
-        // Set up the objects needed
-        $my_wp_query = new WP_Query();
-        $all_wp_pages = $my_wp_query->query(array('post_type' => 'page'));
-
-        $parentPage = get_page_by_path('project');
-
-        // Filter through all pages and find Portfolio's children
-
-        $about_children = get_page_children( $parentPage->ID, $all_wp_pages );
-
-        // echo what we get back from WP to the browser
-        //echo '<pre>' . print_r( $about_children, true ) . '</pre>';
-
-    ?>
     <div id="top-content">
         <ul>
-            <?php foreach($about_children as $c){ ?>
+            <?php foreach($news_posts as $c){ ?>
                 <li>
+                    <h4><?php print $c->post_title; ?></h4>
                     <div class="about-content">
-                        <?php echo do_shortcode('[portfolio_slideshow id='.$c->ID.']');?>
+                        <?php print apply_filters('the_content', $c->post_content); ?>
                     </div>
                 </li>
             <?php } ?>
         </ul>
-    </div>
-    <div id="bottom-bar">
-        <?php
-            $idx = 0;
-            foreach ($about_children as $p) {
-                $thumb = get_the_post_thumbnail($p->ID, 'thumbnail');
-                print '<a href="javascript:sliders[0].goTo('.$idx.')">'.$thumb.'</a>';
-                $idx++;
-            }
-        ?>
     </div>
 </div>
 

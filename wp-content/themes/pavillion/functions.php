@@ -140,8 +140,10 @@ function twentytwelve_scripts_styles() {
 	/*
 	 * Adds JavaScript for handling the navigation menu hide-and-show behavior.
 	 */
-	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.10.2.min.js', array(), '1.0', true );
-    wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.10.2.min.js', array(), '1.0', false );
+    wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', false );
+    wp_enqueue_script( 'flip', get_template_directory_uri() . '/js/jquery.flippy.min.js', array('jquery'), '1.0', false );
+
 /*
 	$font_url = twentytwelve_get_font_url();
 	if ( ! empty( $font_url ) )
@@ -156,6 +158,7 @@ function twentytwelve_scripts_styles() {
 	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() );
     wp_enqueue_style( 'pavillion-home', get_template_directory_uri() . '/css/home.css', array( 'twentytwelve-style' ), '20121010' );
     wp_enqueue_style( 'pavillion-about', get_template_directory_uri() . '/css/about.css', array( 'twentytwelve-style' ), '20121010' );
+    wp_enqueue_style( 'pavillion-news', get_template_directory_uri() . '/css/news.css', array( 'twentytwelve-style' ), '20121010' );
 
 	/*
 	 * Loads the Internet Explorer specific stylesheet.

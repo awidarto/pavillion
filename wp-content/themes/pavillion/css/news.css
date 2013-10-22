@@ -1,0 +1,29 @@
+#news-list a{
+    display: block;
+    min-height: 30px;
+    padding:10px;
+    background-color: #333;
+    text-decoration: none;
+    color:#fff;
+}
+
+#news-list a:hover{
+    background-color: #999;
+}
+
+.news-content{
+    height: 100%;
+    word-wrap:break-word;
+    display: block;
+    line-height: 1.5em;
+    text-align: justify;
+    padding: 5px 10px;
+    font-family: "Open Sans";
+    font-size: 12px;
+    overflow-y:auto;
+}
+#news-top-content{
+    height: 390px;
+    width: 610px;
+    overflow: hidden;
+}

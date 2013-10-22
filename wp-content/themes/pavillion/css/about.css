@@ -197,6 +197,10 @@
 }
 
 /*slide show*/
+.slideshow-content{
+    height:300px;
+    overflow: hidden;
+}
 
 .slideshow-content img{
     width:100%;
@@ -207,6 +211,10 @@
     overflow: hidden;
 }
 
-.slideshow-wrapper .pager img{
+.slideshow-wrapper .pager{
     margin: 0px;
+}
+
+.slideshow-wrapper .pager img{
+    padding: 0px;
 }
