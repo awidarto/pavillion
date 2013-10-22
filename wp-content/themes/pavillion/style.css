@@ -613,6 +613,10 @@ a .header-image{
 	display: inline-block;
 }
 
+#bottom-nav a{
+    font-size: 14px;
+}
+
 /* Banner */
 section[role="banner"] {
 	margin-bottom: 48px;
