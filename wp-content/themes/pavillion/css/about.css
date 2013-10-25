@@ -10,6 +10,9 @@
     text-decoration: none;
 }
 
+#bottom-nav a:hover{
+    color:orange;
+}
 
 #main-about{
     width:960px;

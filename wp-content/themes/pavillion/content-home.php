@@ -24,7 +24,7 @@
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
-        array('class'=>'thumb-menu','label'=>'interior','url'=>'tag'.pav_tag_menu('interior')),
+        array('class'=>'thumb-menu','label'=>'interior','url'=>'tag/'.pav_tag_menu('interior')),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
