@@ -28,6 +28,11 @@
 if ( ! isset( $content_width ) )
 	$content_width = 625;
 
+function pav_tag_menu($name){
+    $m = get_term_by('name',$name,'post_tag');
+    return $m->slug;
+}
+
 /**
  * Sets up theme defaults and registers the various WordPress features that
  * Twenty Twelve supports.

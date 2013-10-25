@@ -16,9 +16,9 @@
         <a href="<?php print site_url(); ?>">home</a>
         | <a href="<?php print site_url(); ?>/about">about</a>
         | <a href="<?php print site_url(); ?>/awards">awards</a>
-        | <a href="<?php print site_url(); ?>/tag/architecture-2">architecture</a>
-        | <a href="<?php print site_url(); ?>/tag/interior-2">interior</a>
-        | <a href="<?php print site_url(); ?>/tag/lighting-2">lighting</a>
+        | <a href="<?php print site_url(); ?>/tag/<?php print pav_tag_menu('architecture'); ?>">architecture</a>
+        | <a href="<?php print site_url(); ?>/tag/<?php print pav_tag_menu('interior'); ?>">interior</a>
+        | <a href="<?php print site_url(); ?>/tag/<?php print pav_tag_menu('lighting'); ?>">lighting</a>
         | <a href="<?php print site_url(); ?>/news">news</a>
         | <a href="<?php print site_url(); ?>/contact">contact</a>
 </div>

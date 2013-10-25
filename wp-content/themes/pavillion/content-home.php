@@ -1,5 +1,6 @@
 <?php
 
+
     $flipper = array(
         array('class'=>'thumb-menu','label'=>'home','url'=>site_url() ),
         array('class'=>'thumb-flip','label'=>'','url'=>site_url() ),
@@ -12,10 +13,10 @@
 
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
-        array('class'=>'thumb-menu','label'=>'architecture','url'=>'tag/architecture-2'),
+        array('class'=>'thumb-menu','label'=>'architecture','url'=>'tag/'.pav_tag_menu('architecture')),
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
-        array('class'=>'thumb-menu','label'=>'lighting','url'=>'tag/lighting-2'),
+        array('class'=>'thumb-menu','label'=>'lighting','url'=>'tag/'.pav_tag_menu('lighting')),
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'home','url'=>'/'),
 
@@ -23,7 +24,7 @@
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
-        array('class'=>'thumb-menu','label'=>'interior','url'=>'tag/interior-2'),
+        array('class'=>'thumb-menu','label'=>'interior','url'=>'tag'.pav_tag_menu('interior')),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
         array('class'=>'thumb-flip','label'=>'','url'=>'/'),
@@ -50,11 +51,11 @@
 
     //$pro_children = get_page_children( $parentPage->ID, $all_wp_pages );
 
-    $arch_children = $my_wp_query->query( array('post_parent'=>$parentPage->ID, 'tag'=>'architecture-2' ), $all_wp_pages);
+    $arch_children = $my_wp_query->query( array('post_parent'=>$parentPage->ID, 'tag'=>pav_tag_menu('architecture') ), $all_wp_pages);
 
-    $light_children = $my_wp_query->query( array('post_parent'=>$parentPage->ID, 'tag'=>'lighting-2' ), $all_wp_pages);
+    $light_children = $my_wp_query->query( array('post_parent'=>$parentPage->ID, 'tag'=>pav_tag_menu('lighting') ), $all_wp_pages);
 
-    $interior_children = $my_wp_query->query( array('post_parent'=>$parentPage->ID, 'tag'=>'interior-2' ), $all_wp_pages);
+    $interior_children = $my_wp_query->query( array('post_parent'=>$parentPage->ID, 'tag'=>pav_tag_menu('interior') ), $all_wp_pages);
 
     $proimage = array();
     $ar_ac = array();
