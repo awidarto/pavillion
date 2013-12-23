@@ -47,20 +47,25 @@ get_header('about'); ?>
     }
 
     jQuery(function($) {
-        $('#top-content').each(function() {
+        $('#news-top-content').each(function() {
           sliders.push(new Slider(this))
         })
+
+        $('#about-parent-content, .about-content, .news-content, #news-list ,.detail-content').lionbars({
+            autohide: false
+        });
+
     });
 
 </script>
 <?php
 
-    $news_posts = get_posts(array('category'=>'news'));
+    $news_posts = get_posts(array('category'=>'news','posts_per_page'=>-1));
 
 ?>
 
 <div id="about-left">
-    <h1 class="entry-title"><?php the_title(); ?></h1>
+    <h1 class="entry-title white"><?php the_title(); ?></h1>
     <div id="news-list">
         <ul>
             <?php
@@ -77,12 +82,12 @@ get_header('about'); ?>
     </div>
 </div>
 <div id="about-right">
-    <div id="top-content">
+    <div id="news-top-content">
         <ul>
             <?php foreach($news_posts as $c){ ?>
                 <li>
                     <h4><?php print $c->post_title; ?></h4>
-                    <div class="about-content">
+                    <div class="news-content">
                         <?php print apply_filters('the_content', $c->post_content); ?>
                     </div>
                 </li>

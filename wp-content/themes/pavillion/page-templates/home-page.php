@@ -11,6 +11,6 @@
 
 get_header('home'); ?>
 
-<?php get_template_part( 'content', 'home' ); ?>
+<?php get_template_part( 'content', 'home2' ); ?>
 
 <?php get_footer('home'); ?>

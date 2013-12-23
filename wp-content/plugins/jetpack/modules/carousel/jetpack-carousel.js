@@ -307,12 +307,12 @@ jQuery(document).ready(function($) {
 				})
 				.hide()
 				.append(overlay)
+                .append(close_hint)
+                .append(info)
 				.append(gallery)
 				.append(fadeaway)
-				.append(info)
 				.append(nextButton)
 				.append(previousButton)
-				.append(close_hint)
 				.appendTo($('body'))
 				.click(function(e){
 					var target = $(e.target), wrap = target.parents('div.jp-carousel-wrap'), data = wrap.data('carousel-extra'),

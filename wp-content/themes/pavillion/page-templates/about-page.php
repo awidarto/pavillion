@@ -47,9 +47,25 @@ get_header('about'); ?>
     }
 
     jQuery(function($) {
-        $('#top-content').each(function() {
+
+        $('#profile-top-content').each(function() {
           sliders.push(new Slider(this))
         })
+
+        $('#about-parent-content, .profile-body, .detail-content').lionbars();
+
+        //$('#sliderthumb').tinycarousel();
+
+        $('.overview').bxSlider({
+            minSlides: 5,
+            maxSlides:5,
+            slideWidth: 52,
+            slideMargin: 20,
+            infiniteLoop:false,
+            hideControlOnEnd:true
+
+        });
+
     });
 
 </script>
@@ -64,7 +80,7 @@ get_header('about'); ?>
     <?php
         // Set up the objects needed
         $my_wp_query = new WP_Query();
-        $all_wp_pages = $my_wp_query->query(array('post_type' => 'page'));
+        $all_wp_pages = $my_wp_query->query(array('post_type' => 'page','posts_per_page'=>-1));
 
         $parentPage = get_page_by_path('about');
 
@@ -76,27 +92,66 @@ get_header('about'); ?>
         //echo '<pre>' . print_r( $about_children, true ) . '</pre>';
 
     ?>
-    <div id="top-content">
+    <div id="profile-top-content">
         <ul>
             <?php foreach($about_children as $c){ ?>
                 <li>
-                    <h4><?php print $c->post_title; ?></h4>
-                    <div class="about-content">
-                        <?php print $c->post_content; ?>
+                    <div class="profile-content">
+                        <div class="profile-photo">
+                            <?php
+                                $thumb = get_the_post_thumbnail($c->ID, 'thumbnail',array('class'=>'profile-img'));
+                                print $thumb;
+
+                                $cf = get_post_custom($c->ID);
+                                print '<span class="pname">'.$cf['personnel-name'][0].'</span><br />';
+                                print '<span class="ptitle">'.$cf['personnel-title'][0].'</span>';
+                            ?>
+                        </div>
+
+                        <div class="profile-body">
+                            <?php
+                            ?>
+                            <?php print apply_filters('the_content', $c->post_content); ?>
+                        </div>
                     </div>
                 </li>
             <?php } ?>
         </ul>
     </div>
-    <div id="bottom-bar">
-        <?php
-            $idx = 0;
-            foreach ($about_children as $p) {
-                $thumb = get_the_post_thumbnail($p->ID, 'thumbnail');
-                print '<a href="javascript:sliders[0].goTo('.$idx.')">'.$thumb.'</a>';
-                $idx++;
-            }
-        ?>
+    <div id="bottom-bar" >
+        <ul class="overview">
+            <?php
+                $idx = 0;
+                foreach ($about_children as $p) {
+                    $thumb = get_the_post_thumbnail($p->ID, 'thumbnail');
+                    print '<li><a href="javascript:sliders[0].goTo('.$idx.')">'.$thumb.'</a></li>';
+                    $idx++;
+                }
+            ?>
+        </ul>
+
+<?php
+/*
+        <div id="sliderthumb">
+            <a class="buttons prev" href="#"><img src="<?php print get_template_directory_uri() . '/images/' ?>prev.png" alt="prev" /></a>
+                <div class="viewport">
+                    <ul class="overview">
+                        <?php
+                            $idx = 0;
+                            foreach ($about_children as $p) {
+                                $thumb = get_the_post_thumbnail($p->ID, 'thumbnail');
+                                print '<li><a href="javascript:sliders[0].goTo('.$idx.')">'.$thumb.'</a></li>';
+                                $idx++;
+                            }
+                        ?>
+                    </ul>
+                </div>
+            <a class="buttons next" href="#"><img src="<?php print get_template_directory_uri() . '/images/' ?>next.png" alt="prev" /></a>
+        </div>
+
+*/
+?>
+
     </div>
 </div>
 

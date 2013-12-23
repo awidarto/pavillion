@@ -8,5 +8,6 @@
  */
 ?>
         <?php while ( have_posts() ) : the_post(); ?>
-            <?php the_content(); ?>
+            <?php get_the_content_with_formatting(); ?>
+            <?php //the_content(); ?>
         <?php endwhile; // end of the loop. ?>

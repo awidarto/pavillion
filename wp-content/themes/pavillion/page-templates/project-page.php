@@ -81,7 +81,7 @@ get_header('about'); ?>
             <?php foreach($about_children as $c){ ?>
                 <li>
                     <div class="about-content">
-                        <?php echo do_shortcode('[portfolio_slideshow id='.$c->ID.']');?>
+                        <?php echo do_shortcode('[portfolio_slideshow id='.$c->ID.' slideheight=360 size=large]');?>
                     </div>
                 </li>
             <?php } ?>

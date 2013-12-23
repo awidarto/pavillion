@@ -484,13 +484,19 @@ html {
 body {
 	font-size: 14px;
 	font-size: 1rem;
-	font-family: "Open Sans",Helvetica, Arial, sans-serif;
+	font-family: Arial,Helvetica,sans-serif;
 	text-rendering: optimizeLegibility;
 	color: #444;
 }
+
 body.custom-font-enabled {
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
+body{
+    background-color: #29292B;
+}
+
 a {
 	outline: none;
 	color: #21759b;
@@ -526,6 +532,14 @@ a:hover {
 	padding: 0 1.714285714rem;
     background-color: #fff;
 }
+
+#page{
+    width: 803px;
+    max-width: 803px;
+    max-height: 427px;
+    overflow: hidden;
+}
+
 .site-content {
 	margin: 24px 0 0;
 	margin: 1.714285714rem 0 0;
@@ -538,6 +552,11 @@ a:hover {
 /* Header */
 #masthead h1{
     text-align: center;
+}
+
+#header-container{
+    width: 803px;
+    margin:auto;
 }
 
 .site-header {
@@ -576,7 +595,7 @@ a:hover {
 	color: #757575;
 }
 a .header-image{
-    display:block;
+    display:inline-block;
 }
 .header-image {
 	/*margin-top: 24px;
@@ -614,7 +633,7 @@ a .header-image{
 }
 
 #bottom-nav a{
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Banner */
@@ -672,7 +691,7 @@ section[role="banner"] {
 /* Footer */
 footer[role="contentinfo"] {
 	clear: both;
-	font-size: 12px;
+	font-size: 10px;
 	line-height: 2;
 	max-width: 960px;
 	margin-top: 0px;
@@ -686,8 +705,8 @@ footer[role="contentinfo"] {
 	padding: 24px 0;
 	padding: 1.714285714rem 0;
     text-align: center;
-    color: #fff;
-    font-family: "Open Sans";
+    color: #bbb;
+    font-family: Arial,sans-serif;
     font-weight: normal;
 }
 footer[role="contentinfo"] a {
@@ -1466,7 +1485,7 @@ img#wpstats {
 	}
 	.site {
 		margin: 0 auto;
-		max-width: 960px;
+		max-width: 803px;
 		max-width: 68.571428571rem;
 		overflow: hidden;
 	}
@@ -1636,7 +1655,7 @@ img#wpstats {
         box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 	}
 	body.custom-background-empty {
-		background-color: #fff;
+		background-color: #29292B;
 	}
 	body.custom-background-empty .site,
 	body.custom-background-white .site {

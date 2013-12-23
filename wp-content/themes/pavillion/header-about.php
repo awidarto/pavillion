@@ -39,9 +39,11 @@
 
         <?php $header_image = get_header_image();
         if ( ! empty( $header_image ) ) : ?>
+        <div id="header-container">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+        </div>
         <?php endif; ?>
     </header><!-- #masthead -->
 <div id="page" class="hfeed site">
 
-    <div id="main-about" class="wrapper">
+    <div id="main-about" style="max-width:803px;">

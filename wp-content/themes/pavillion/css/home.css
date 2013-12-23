@@ -2,7 +2,6 @@
     width:960px;
     display: block;
     background-color: transparent;
-    background: url(../images/bg-01.jpg);
 }
 
 body .site {
@@ -25,6 +24,8 @@ body .site {
     text-align: center;
     display: block;
     border: 1px solid grey;
+    font-family: "Lato";
+    font-size: 14px;
 }
 
 .thumb-flip{
@@ -35,7 +36,8 @@ body .site {
     text-decoration: none;
     color: white;
     text-transform: lowercase;
-    font-family: "Open Sans";
+    font-family: "Lato";
+    font-size: 16px;
     display: block;
 }
 .thumb-menu a:hover{

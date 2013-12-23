@@ -33,6 +33,13 @@ function pav_tag_menu($name){
     return $m->slug;
 }
 
+function get_the_content_with_formatting ($more_link_text = '(more...)', $stripteaser = 0, $more_file = '') {
+    $content = get_the_content($more_link_text, $stripteaser, $more_file);
+    $content = apply_filters('the_content', $content);
+    $content = str_replace(']]>', ']]&gt;', $content);
+    return $content;
+}
+
 /**
  * Sets up theme defaults and registers the various WordPress features that
  * Twenty Twelve supports.
@@ -146,8 +153,12 @@ function twentytwelve_scripts_styles() {
 	 * Adds JavaScript for handling the navigation menu hide-and-show behavior.
 	 */
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.10.2.min.js', array(), '1.0', false );
-    wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', false );
-    wp_enqueue_script( 'flip', get_template_directory_uri() . '/js/jquery.flippy.min.js', array('jquery'), '1.0', false );
+    //wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', false );
+    //wp_enqueue_script( 'flip', get_template_directory_uri() . '/js/jquery.flippy.min.js', array('jquery'), '1.0', false );
+    wp_enqueue_script( 'lionbar', get_template_directory_uri() . '/js/jquery.lionbars.0.3.js', array('jquery'), '0.3', false );
+    wp_enqueue_script( 'bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), '0.5', false );
+    wp_enqueue_script( 'tinycarousel', get_template_directory_uri() . '/js/jquery.tinycarousel.min.js', array('jquery'), '0.3', false );
+
 
 /*
 	$font_url = twentytwelve_get_font_url();
@@ -164,6 +175,10 @@ function twentytwelve_scripts_styles() {
     wp_enqueue_style( 'pavillion-home', get_template_directory_uri() . '/css/home.css', array( 'twentytwelve-style' ), '20121010' );
     wp_enqueue_style( 'pavillion-about', get_template_directory_uri() . '/css/about.css', array( 'twentytwelve-style' ), '20121010' );
     wp_enqueue_style( 'pavillion-news', get_template_directory_uri() . '/css/news.css', array( 'twentytwelve-style' ), '20121010' );
+    wp_enqueue_style( 'lionbars', get_template_directory_uri() . '/css/lionbars.css', array( 'twentytwelve-style' ), '20121010' );
+    wp_enqueue_style( 'tinycarousel', get_template_directory_uri() . '/css/tinycarousel.css', array( 'twentytwelve-style' ), '20121010' );
+    wp_enqueue_style( 'bxslider', get_template_directory_uri() . '/css/jquery.bxslider.css', array( 'twentytwelve-style' ), '20121010' );
+    wp_enqueue_style( 'typography', get_template_directory_uri() . '/css/typography.css', array( 'twentytwelve-style' ), '20121010' );
 
 	/*
 	 * Loads the Internet Explorer specific stylesheet.
@@ -498,3 +513,27 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130301', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
+function twentyten_remove_gallery_css( $css ) {
+    return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
+}
+add_filter( 'gallery_style', 'twentyten_remove_gallery_css' );
+
+function set_flexslider_hg_rotators( $rotators = array() )
+{
+    //$rotators['homepage']         = array( 'size' => 'homepage-rotator', 'heading_tag' => 'h1' );
+    $rotators['homepage'] = array( 'size' => 'homepage-rotator', 'options' => "{slideshowSpeed: 7000, direction: 'vertical'}" );    $rotators['contactus']        = array( 'size' => 'thumbnail', 'orderby' => 'title', 'order' => 'DESC' );
+    $rotators['gallerypage']  = array( 'size' => 'medium', 'hide_slide_data' => true );
+    $rotators['amenities']        = array( 'size' => 'your-custom-size', 'limit' => 5 );
+    return $rotators;
+}
+add_filter('flexslider_hg_rotators', 'set_flexslider_hg_rotators');
+
+add_image_size( 'homepage-rotator', '803', '427', true );
+
+add_filter('wp_get_attachment_link', 'add_gallery_id_data');
+
+function add_gallery_id_data($link) {
+    global $post;
+    return str_replace('<a href', '<a data-gallery="#gallery-'. $post->ID .'" href', $link);
+}

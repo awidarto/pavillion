@@ -1,0 +1,26 @@
+/* Tiny Carousel */
+#sliderthumb { height: 80px; overflow:hidden; padding: 0px;   }
+#sliderthumb .viewport { float: left; width: 415px; height: 80px; overflow: hidden; position: relative; }
+#sliderthumb a.buttons{
+    background-color: #fff;
+    /*display: block;*/
+    margin: 0px 0px 0 0;
+    background-position: 0 -38px;
+    float: left;
+    width: 20px;
+    padding-left: 4px;
+    padding-top: 9px;
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    }
+#sliderthumb .next { background-position: 0 0; margin: 0px 0 0 0px;  }
+#sliderthumb .disable { display: none;}
+#sliderthumb .overview { list-style: none; position: absolute; padding: 0; margin: 0; width: 240px; left: 0 top: 0; }
+#sliderthumb .overview li{ float: left;
+    margin: 0 0px 0 0;
+    padding: 0px 10px;
+    height: 80px;
+    border: 0px solid #dcdcdc;
+    width: 70px;
+}

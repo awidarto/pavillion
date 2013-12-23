@@ -57,6 +57,32 @@
 
     $interior_children = $my_wp_query->query( array('post_parent'=>$parentPage->ID, 'tag'=>pav_tag_menu('interior') ), $all_wp_pages);
 
+    $temp = array();
+    for($i = 0 ; $i < count($arch_thumb);$i++){
+        if(count($arch_children) > 0){
+            $temp[] = array_pop($arch_children);
+        }
+    }
+    $arch_children = $temp;
+
+    $temp = array();
+    for($i = 0 ; $i < count($light_thumb);$i++){
+        if(count($light_children) > 0){
+            $temp[] = array_pop($light_children);
+        }
+    }
+    $light_children = $temp;
+
+
+    $temp = array();
+    for($i = 0 ; $i < count($interior_thumb);$i++){
+        if(count($interior_children) > 0){
+            $temp[] = array_pop($interior_children);
+        }
+    }
+    $interior_children = $temp;
+
+
     $proimage = array();
     $ar_ac = array();
     $li_ac = array();
@@ -75,6 +101,8 @@
         }
     }
 
+    //print_r($flipper);
+
     $pointer = 0;
     foreach($light_children as $li){
         $li_idx = $light_thumb[$pointer];
@@ -87,6 +115,8 @@
             $proimage[$li_idx] = '<a href="#">'.$flipper[$li_idx]['post_thumb'].'</a>';
         }
     }
+
+    //print_r($flipper);
 
     $pointer = 0;
     foreach($interior_children as $int){
